@@ -23,7 +23,6 @@ public class Bones extends ClickCompare
 	public boolean isEntryValid(MenuEntryAdded event)
 	{
 		return event.getOpcode() == MenuAction.GAME_OBJECT_FIRST_OPTION.getId() && !event.isForceLeftClick() &&
-			event.getOption().toLowerCase().contains("chop") &&
 			event.getTarget().toLowerCase().contains("tree");
 	}
 
@@ -37,7 +36,7 @@ public class Bones extends ClickCompare
 
 		client.createMenuEntry(-1)
 			.setOption("Use")
-			.setTarget("<col=ff9040>Bones<col=ffffff> -> " + getTargetMap().get(event.getIdentifier()))
+			.setTarget("<col=ff9040>Superior Dragon Bones<col=ffffff> -> " + getTargetMap().get(event.getIdentifier()))
 			.setType(MenuAction.ITEM_USE_ON_GAME_OBJECT)
 			.setIdentifier(event.getIdentifier())
 			.setParam0(event.getActionParam0())
@@ -48,7 +47,7 @@ public class Bones extends ClickCompare
 	@Override
 	public boolean isClickValid(MenuOptionClicked event)
 	{
-		return event.getMenuTarget().contains("<col=ff9040>Bones<col=ffffff> -> ") &&
+		return event.getMenuTarget().contains("<col=ff9040>Superior Dragon Bones<col=ffffff> -> ") &&
 			event.getMenuTarget().toLowerCase().contains("tree") && updateSelectedItem(BONE_SET);
 	}
 
@@ -66,7 +65,7 @@ public class Bones extends ClickCompare
 			return;
 		}
 		e.setOption("Use");
-		e.setTarget("<col=ff9040>Bones<col=ffffff> -> " + getTargetMap().get(e.getIdentifier()));
+		e.setTarget("<col=ff9040>Superior Dragon Bones<col=ffffff> -> " + getTargetMap().get(e.getIdentifier()));
 		e.setForceLeftClick(true);
 	}
 }
