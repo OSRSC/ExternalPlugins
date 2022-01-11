@@ -17,7 +17,7 @@ public interface OneClickConfig extends Config
 		keyName = "Type",
 		name = "Type",
 		description = "Select which one click method you would like to use.",
-		position = 1
+		position = 2
 	)
 	default Types getType()
 	{
@@ -28,7 +28,7 @@ public interface OneClickConfig extends Config
 		keyName = "spell",
 		name = "Spell Select",
 		description = "Choose a spell to One click",
-		position = 2
+		position = 1
 	)
 	default Spells getSpells()
 	{
