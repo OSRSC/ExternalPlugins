@@ -13,6 +13,19 @@ import net.runelite.client.config.ConfigItem;
 @ConfigGroup("oneclick")
 public interface OneClickConfig extends Config
 {
+
+	@ConfigItem(
+		keyName = "spell",
+		name = "Spell Selecter",
+		description = "Choose a spell to One click",
+		position = 1
+	)
+	default Spells getSpells()
+	{
+		return Spells.NONE;
+	}
+	
+	
 	@ConfigItem(
 		keyName = "Type",
 		name = "Type",
@@ -24,16 +37,7 @@ public interface OneClickConfig extends Config
 		return Types.NONE;
 	}
 
-	@ConfigItem(
-		keyName = "spell",
-		name = "Spell Select",
-		description = "Choose a spell to One click",
-		position = 1
-	)
-	default Spells getSpells()
-	{
-		return Spells.NONE;
-	}
+
 
 	@ConfigItem(
 		keyName = "isUsingImbue",
