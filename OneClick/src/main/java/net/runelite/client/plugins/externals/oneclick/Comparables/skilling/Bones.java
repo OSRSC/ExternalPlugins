@@ -23,8 +23,8 @@ public class Bones extends ClickCompare
 	public boolean isEntryValid(MenuEntryAdded event)
 	{
 		return event.getOpcode() == MenuAction.GAME_OBJECT_FIRST_OPTION.getId() && !event.isForceLeftClick() &&
-			event.getOption().toLowerCase().contains("pray") &&
-			event.getTarget().toLowerCase().contains("altar");
+			event.getOption().toLowerCase().contains("chop down") &&
+			event.getTarget().toLowerCase().contains("tree");
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class Bones extends ClickCompare
 	public boolean isClickValid(MenuOptionClicked event)
 	{
 		return event.getMenuTarget().contains("<col=ff9040>Bones<col=ffffff> -> ") &&
-			event.getMenuTarget().toLowerCase().contains("altar") && updateSelectedItem(BONE_SET);
+			event.getMenuTarget().toLowerCase().contains("tree") && updateSelectedItem(BONE_SET);
 	}
 
 	@Override
